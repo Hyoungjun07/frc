@@ -61,7 +61,7 @@
   text-decoration: underline;
 }
 
-numberInput {
+.numberInput {
     width: 30% !important;
     height: 30px !important;
     border-radius: 15px;

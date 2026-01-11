@@ -8,28 +8,28 @@ export default function Dtf() {
         <form>
           <label> Team 1 Number</label>
             <div>
-              <input type='number'/>
+              <input type='number' className="numberInput"/>
             </div>
           <label> Team 2 Number</label>
           <div>
-              <input type='number'/>
+              <input type='number' className="numberInput"/>
             </div>
           <label> Team 3 Number</label>
           <div>
-              <input type='number'/>
+              <input type='number' className="numberInput"/>
             </div>
         <h2> Alliance 2 </h2>
           <label> Team 1 Number</label>
           <div>
-              <input type='number'/>
+              <input type='number' className="numberInput"/>
             </div>
           <label> Team 2 Number</label>
           <div>
-              <input type='number'/>
+              <input type='number' className="numberInput"/>
             </div>
           <label> Team 3 Number</label>
           <div>
-              <input type='number'/>
+              <input type='number' className="numberInput"/>
             </div>
             <h3>
               <button>submit</button>
