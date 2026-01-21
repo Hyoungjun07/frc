@@ -5,7 +5,7 @@ import {QRCode, Button, Divider } from 'antd';
  
 export default function Match() {
 
-  const [team_number, setTeamNumber] = useState(0);
+  const [team_number, setTeamNumber] = useState(0); //usestate team_number to update team number using setTeamNumber
 
   const [matchData, setMatchData] = useState({
     team: 0,
@@ -16,14 +16,14 @@ export default function Match() {
     robot_position: "a"
   });
 
-  useEffect(() => {
+  useEffect(() => {           //for this part, I used useEffect to update team_number constantly
     setMatchData(prev => ({
       ...prev,
       team: team_number
     }));
   }, [team_number]);
 
-  async function request(query) {
+  async function request(query) {         //request function
 	const response = await fetch('https://www.thebluealliance.com/api/v3/' + query, {
 		method: "GET",
 		headers: {
@@ -85,7 +85,7 @@ export default function Match() {
 
   async function handleSubmit(event) {
       event.preventDefault();
-      setTeamNumber(await getTeamsInMatch("2025cass", "qm", matchData.match_number, matchData.robot_position))
+      setTeamNumber(await getTeamsInMatch("2025cass", "qm", matchData.match_number, matchData.robot_position)) //important
       setShowQR(true);  // show QR after submit
   }
 
@@ -112,7 +112,7 @@ export default function Match() {
             type="text"
             value={matchData.team}
             onChange={handleChange}
-            disabled
+            disabled //make sure to disable
             required />
         </div>
  
